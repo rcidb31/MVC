@@ -1,0 +1,35 @@
+include ../../includes/head
+
+
+
+
+<main class="flex justify-between">
+    <section class="ml-5">
+        <a href="/customer"><p class="text-3xl p-8">← Volver Atrás</p></a>
+
+
+        <p class="text-xl pl-8">UID: #{ customer.id }</p>
+        <p class="text-xl pl-8">Nombre Completo: #{ customer.name }</p>
+        <p class="text-xl pl-8">RUT Chileno: #{ customer.rut }</p>
+        <p class="text-xl pl-8">Correo Electrónico: #{ customer.email }</p>
+        <p class="text-xl pl-8">WhatsApp: #{ customer.whatsapp }</p>
+
+
+    </section>
+
+    <section class="mt-6 mr-8">
+
+
+
+        <a class="text-2xl" href="/customer/#{ customer.id }/edit">+ Editar Cliente</a> <br>
+
+
+
+    </section>
+
+
+</main>
+
+include ../../includes/footer
+
+

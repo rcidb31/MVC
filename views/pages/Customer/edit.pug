@@ -1,0 +1,42 @@
+include ../../includes/head
+
+<h1 class="text-4xl p-8">Editar Cliente</h1>
+
+<div class="max-w-md mx-auto bg-white shadow-md p-8 mt-8 rounded">
+    <h1 class="text-2xl font-semibold mb-6">Formulario de Cliente</h1>
+
+
+    <form action="/customer/#{ customer.id }" method="post">
+
+        <input type="hidden" name="_method" value="PUT">
+
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Nombre:</label>
+            <input type="text" id="name" value="#{ customer.name }" name="name" class="py-2 border mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="rut" class="block text-sm font-medium text-gray-700">RUT:</label>
+            <input type="text" id="rut" value="#{ customer.rut }" name="rut" class="py-2 border mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+            <input type="email" id="email" value="#{ customer.email }" name="email" class="py-2 border mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
+        </div>
+
+        <div class="mb-6">
+            <label for="whatsapp" class="block text-sm font-medium text-gray-700">WhatsApp:</label>
+            <input type="text" id="whatsapp" value="#{ customer.whatsapp }" name="whatsapp" class="py-2 border mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
+        </div>
+
+        <div class="flex items-center justify-end">
+            <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Actualizar Registros</button>
+        </div>
+
+    </form>
+
+</div>
+
+
+include ../../includes/footer

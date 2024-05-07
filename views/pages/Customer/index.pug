@@ -1,0 +1,48 @@
+include ../../includes/head
+
+<main class="flex justify-between bg-gray-200">
+
+    <section class="ml-6">
+
+        <h1 class="text-3xl underline mt-10">Clientes</h1>
+
+        <table class="table-auto mt-6">
+
+            <thead>
+             <tr>
+                <th class="px-8 py-2">RUT</th>
+                <th class="px-8 py-2">Nombre</th>
+                <th class="px-8 py-2">Acciones</th>
+             </tr>
+            </thead>
+
+            <tbody>
+
+             if Object.keys(customers).length > 0
+            each val, index in customers
+             <tr>
+                 <td class="px- py-1">#{ val.rut }</td>
+                 <td class="px-8 py-1">#{ val.name }</td>
+                 <td class="px-8 py-1">
+                    <a href="/customer/#{ val.id }/show" class="hover:text-green-500">Ver</a>
+                    <a href="/customer/#{ val.id }/edit" class="hover:text-blue-500">Actualizar</a>
+                    <form class="inline-flex hover:text-red-500" action="/customer/#{ val.id }/delete" method="POST"><input type="hidden" name="_method" value="DELETE"> <button type="submit" class="">Eliminar</button></form></td>
+            </tr>
+
+
+            </tbody>
+        </table>
+        <br>
+
+    </section>
+
+    <section class="mt-6 mr-8">
+
+        <a class="text-2xl" href="/customer/new">+ Añadir Nuevo Cliente</a>
+
+    </section>
+
+</main>
+
+
+include ../../includes/footer
